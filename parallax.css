@@ -1,0 +1,88 @@
+*{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+}
+#wrapper{
+          height: 100vh;
+          /* to stop image from horizontal scrolling */
+          overflow-x: hidden; 
+          overflow-y: auto;
+          perspective: 10px;
+}
+.container{
+          position: relative;
+          display: flex;
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+          transform-style: preserve-3d;
+          z-index: -1;
+}
+.foreground,.background{
+          /* to overlap images */
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          z-index: -1;
+          /* to fit in cointainer */
+          object-fit: cover;
+}
+.background{
+          /* translatez negative vaprun image lamb zati (barik disti tyamula) scale varun mothi hoti tymaula 3d scrolling effect disto */
+          transform: translateZ(-40px) scale(6);
+
+}
+.foreground{
+          transform: translateZ(-20px) scale(3);   
+}
+h1{
+          position: absolute;
+          top: 7rem;
+          color: white;
+          text-shadow:  10px 10px 37px 4px rgba(0,0,0,0.75);
+          font-size: 10rem;
+          letter-spacing: 4px;
+}
+section{
+          background-color: rgb(45, 45, 45);
+          color: white;
+          padding: 5rem 0;
+}
+.bg{
+          position: relative;
+          /* to fix image at one position */
+          background-attachment: fixed;
+          width: 100%;
+          height: 500px;
+          background-size: cover;
+          background-position: center;
+}
+.bg1{
+          /* img tag vs this */
+          background-image: url(sport-1.jpg);
+}
+.bg2{
+          background-image: url(sport-2.jpg);
+}
+.bg3{
+          background-image: url(sport-3.jpg);
+}
+.adv{
+          font-size: 5rem;
+          padding: 0 10rem;
+}
+.text{
+          font-size: 1.5rem;
+          padding: 0 10rem;
+          margin: 5rem 0;
+}
+.desc{
+          font-size: 3.5rem;
+          position: absolute;
+          padding: .5rem 2.5rem;
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%);
+          font-weight: 600;
+}
